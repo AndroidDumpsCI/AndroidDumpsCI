@@ -5,7 +5,7 @@ on:
     branches: [ main ]
 
 env:
-  ROM_URL: https://bigota.d.miui.com/V12.0.2.0.QFGINXM/miui_LAVENDERINGlobal_V12.0.2.0.QFGINXM_ef84abc890_10.0.zip
+  ROM_URL: https://repo.hitcloud.workers.dev/0:down/Android/Samsung/Universal7870/crDroidAndroid-10.0-20210119-j7xelte-v6.14.zip
   TZ: America/Sao_Paulo
 
 jobs:
@@ -35,4 +35,4 @@ jobs:
          uses: actions/upload-artifact@v1
          with:
            name: Dump
-           path: /home/runner/work/AndroidDumpsCI/AndroidDumpsCI/.github/workflows/working/*tar.xz
+           path: /home/runner/work/AndroidDumpsCI/AndroidDumpsCI/.github/workflows/working/*.tar.xz

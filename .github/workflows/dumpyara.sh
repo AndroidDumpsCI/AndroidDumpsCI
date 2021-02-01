@@ -197,4 +197,5 @@ git commit -asm "Add apps for ${description}"
 git add system/
 git commit -asm "Add system for ${description}"
 
+cd "$PROJECT_DIR"/working/
 tar c "$PROJECT_DIR"/working/"${UNZIP_DIR}"/ | nice -n19 xz -9 -T4 > "${UNZIP_DIR}".tar.xz
