@@ -1,0 +1,25 @@
+name: Dump
+ 
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+       - name: Checkouts
+         uses: actions/checkout@master
+
+       - name: Setup Dump Environment
+         run: |
+              sudo apt install unace unrar zip unzip p7zip-full p7zip-rar sharutils rar uudeview mpack arj cabextract file-roller device-tree-compiler liblzma-dev python3-pip brotli liblz4-tool axel gawk aria2 detox cpio rename
+              pip3 install backports.lzma protobuf pycrypto docopt zstandard twrpdtgen
+
+       - name: Running Dumpyara Shell Script
+         run: |
+              sh ~/.github/workflows/dumpyara.sh
+              ls -la
+              cd "$PROJECT_DIR"/working/
+              ls -la
