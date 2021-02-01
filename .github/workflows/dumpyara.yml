@@ -31,8 +31,13 @@ jobs:
               cd /home/runner/work/AndroidDumpsCI/AndroidDumpsCI/.github/workflows/working/
               ls -la
 
+       - name: Compressing with tar.xz
+         run: |
+              cd /home/runner/work/AndroidDumpsCI/AndroidDumpsCI/.github/workflows/working/
+              tar c /home/runner/work/AndroidDumpsCI/AndroidDumpsCI/.github/workflows/working/* | nice -n19 xz -9 -T4 > dump.tar.xz
+
        - name: Store Generated Files
          uses: actions/upload-artifact@v1
          with:
            name: Dump
-           path: /home/runner/work/AndroidDumpsCI/AndroidDumpsCI/.github/workflows/working/*.tar.xz
+           path: /home/runner/work/AndroidDumpsCI/AndroidDumpsCI/.github/workflows/working/dump.tar.xz
