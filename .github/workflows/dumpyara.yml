@@ -4,6 +4,10 @@ on:
   push:
     branches: [ main ]
 
+env:
+  ROM_URL: https://oxygenos.oneplus.net/OnePlusN10Oxygen_14.E.09_OTA_009_all_2101021731_9c32820c43e443f1.zip
+  TZ: America/Sao_Paulo
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -19,7 +23,7 @@ jobs:
 
        - name: Running Dumpyara Shell Script
          run: |
-              sh ~/.github/workflows/dumpyara.sh
+              bash ~/.github/workflows/dumpyara.sh "$ROM_URL"
               ls -la
               cd "$PROJECT_DIR"/working/
               ls -la
