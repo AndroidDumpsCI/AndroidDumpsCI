@@ -25,6 +25,14 @@ jobs:
        - name: Running Dumpyara Shell Script
          run: |
               bash .github/workflows/dumpyara.sh "$ROM_URL"
+
+       - name: Checking Folder
+         run: |
+              cd /home/runner/work/AndroidDumpsCI/AndroidDumpsCI/.github/workflows/working/
               ls -la
-              cd "$PROJECT_DIR"/working/
-              ls -la
+
+       - name: Store Generated Files
+         uses: actions/upload-artifact@v1
+         with:
+           name: Dump
+           path: /home/runner/work/AndroidDumpsCI/AndroidDumpsCI/.github/workflows/working/*tar.xz
