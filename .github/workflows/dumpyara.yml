@@ -5,7 +5,7 @@ on:
     branches: [ main ]
 
 env:
-  ROM_URL: https://oxygenos.oneplus.net/OnePlusN10Oxygen_14.E.09_OTA_009_all_2101021731_9c32820c43e443f1.zip
+  ROM_URL: https://bigota.d.miui.com/V12.0.2.0.QFGINXM/miui_LAVENDERINGlobal_V12.0.2.0.QFGINXM_ef84abc890_10.0.zip
   TZ: America/Sao_Paulo
 
 jobs:
@@ -18,12 +18,13 @@ jobs:
 
        - name: Setup Dump Environment
          run: |
-              sudo apt install unace unrar zip unzip p7zip-full p7zip-rar sharutils rar uudeview mpack arj cabextract file-roller device-tree-compiler liblzma-dev python3-pip brotli liblz4-tool axel gawk aria2 detox cpio rename
+              sudo apt install unace unrar zip unzip p7zip-full p7zip-rar sharutils rar uudeview mpack arj cabextract file-roller device-tree-compiler liblzma-dev python3-pip python3-setuptools brotli liblz4-tool axel gawk aria2 detox cpio rename
+              pip3 install pip setuptools wheel -U
               pip3 install backports.lzma protobuf pycrypto docopt zstandard twrpdtgen
 
        - name: Running Dumpyara Shell Script
          run: |
-              bash ~/.github/workflows/dumpyara.sh "$ROM_URL"
+              bash .github/workflows/dumpyara.sh "$ROM_URL"
               ls -la
               cd "$PROJECT_DIR"/working/
               ls -la
