@@ -5,7 +5,7 @@ on:
     branches: [ main ]
 
 env:
-  ROM_URL: https://repo.hitcloud.workers.dev/0:down/Android/Samsung/Universal7870/crDroidAndroid-10.0-20210119-j7xelte-v6.14.zip
+  ROM_URL: https://pilotfiber.dl.sourceforge.net/project/crdroid//j7xelte/6.x/crDroidAndroid-10.0-20210125-j7xelte-v6.14.zip
   TZ: America/Sao_Paulo
 
 jobs:
@@ -14,11 +14,11 @@ jobs:
 
     steps:
        - name: Checkouts
-         uses: actions/checkout@master
+         uses: actions/checkout@v2
 
        - name: Setup Dump Environment
          run: |
-              sudo apt install unace unrar zip unzip p7zip-full p7zip-rar sharutils rar uudeview mpack arj cabextract file-roller device-tree-compiler liblzma-dev python3-pip python3-setuptools brotli liblz4-tool axel gawk aria2 detox cpio rename
+              sudo apt install unace unrar zip unzip p7zip-full p7zip-rar sharutils rar uudeview mpack arj cabextract device-tree-compiler liblzma-dev python3-pip python3-setuptools brotli liblz4-tool axel gawk aria2 detox cpio rename
               pip3 install pip setuptools wheel -U
               pip3 install backports.lzma protobuf pycrypto docopt zstandard twrpdtgen
 
@@ -37,7 +37,7 @@ jobs:
               tar c /home/runner/work/AndroidDumpsCI/AndroidDumpsCI/.github/workflows/working/* | nice -n19 xz -9 -T4 > dump.tar.xz
 
        - name: Store Generated Files
-         uses: actions/upload-artifact@v1
+         uses: actions/upload-artifact@v2
          with:
-           name: Dump
            path: /home/runner/work/AndroidDumpsCI/AndroidDumpsCI/.github/workflows/working/dump.tar.xz
+           if-no-files-found: error
