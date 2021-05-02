@@ -27,6 +27,7 @@ jobs:
 
        - name: Setup config envs
          run: |
+              cd phoenix_firmware_dumper
               echo "${{ secrets.GIT_TOKEN }}" > .github_token
               echo "${{ secrets.GIT_ORG_NAME }}" > .github_orgname
               echo "${{ secrets.BOT_TOKEN }}" > .tg_token
@@ -35,7 +36,7 @@ jobs:
        - name: Running Dumpyara
          run: |
               cd phoenix_firmware_dumper
-              bash dumper.sh "$ROM_URL"
+              ./dumper.sh "$ROM_URL"
 
        - name: Checking Dumpyara output folder
          run: |
