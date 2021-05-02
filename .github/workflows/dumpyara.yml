@@ -5,7 +5,7 @@ on:
     branches: [ main ]
 
 env:
-  ROM_URL: https://bigota.d.miui.com/V12.0.3.0.RKHMIXM/alioth_global_images_V12.0.3.0.RKHMIXM_20210416.0000.00_11.0_global_b716fd8a83.tgz
+  ROM_URL: https://bigota.d.miui.com/V12.0.9.0.RKBMIXM/miui_VENUSGlobal_V12.0.9.0.RKBMIXM_4fc24d1ec0_11.0.zip
   TZ: America/Sao_Paulo
 
 jobs:
