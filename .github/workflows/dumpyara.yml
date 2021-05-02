@@ -24,6 +24,8 @@ jobs:
          run: |
               cd phoenix_firmware_dumper
               sudo bash setup.sh
+              git config --global user.name "Hitalo"
+              git config --global user.email "40531911+HitaloSama@users.noreply.github.com"
 
        - name: Setup config envs
          run: |
