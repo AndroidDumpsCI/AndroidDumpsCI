@@ -25,12 +25,24 @@ jobs:
               cd phoenix_firmware_dumper
               sudo bash setup.sh
 
+       - name: Setup config envs
+         env:
+           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+           GITHUB_ORG_NAME: ${{ secrets.GITHUB_ORG_NAME }}
+           BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
+           CHAT_ID: ${{ secrets.CHAT_ID }}
+         run: |
+              echo "$GITHUB_TOKEN" > .github_token
+              echo "$GITHUB_ORG_NAME" > .github_orgname
+              echo "$BOT_TOKEN" > .tg_token
+              echo "$CHAT_ID" > .tg_chat
+
        - name: Running Dumpyara
          run: |
               cd phoenix_firmware_dumper
               bash dumper.sh "$ROM_URL"
 
-       - name: Checking Dumpyara folder
+       - name: Checking Dumpyara output folder
          run: |
               cd phoenix_firmware_dumper
-              ls -la
+              ls -la out
