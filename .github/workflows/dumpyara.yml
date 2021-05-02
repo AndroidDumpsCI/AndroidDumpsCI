@@ -5,7 +5,7 @@ on:
     branches: [ main ]
 
 env:
-  ROM_URL: https://bigota.d.miui.com/V12.0.6.0.RJUMIXM/vayu_global_images_V12.0.6.0.RJUMIXM_20210416.0000.00_11.0_global_b91dae13bb.tgz
+  ROM_URL: http://otafsg-cost-az.coloros.com/OnePlus6/OnePlus6Oxygen_22.J.53_GLO_053_2104202241/patch/amazone2/GLO/OnePlus6Oxygen/OnePlus6Oxygen_22.J.53_GLO_053_2104202241/OnePlus6Oxygen_22.J.53_OTA_053_all_2104202241_650a8ff9880.zip
   TZ: America/Sao_Paulo
 
 jobs:
@@ -39,8 +39,3 @@ jobs:
          run: |
               cd firmware_dumper
               ./dump.sh "$ROM_URL"
-
-       - name: Checking Dumpyara output folder
-         run: |
-              cd firmware_dumper
-              ls -la out
