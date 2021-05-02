@@ -5,7 +5,7 @@ on:
     branches: [ main ]
 
 env:
-  ROM_URL: http://otafsg-cost-az.coloros.com/OnePlus6/OnePlus6Oxygen_22.J.53_GLO_053_2104202241/patch/amazone2/GLO/OnePlus6Oxygen/OnePlus6Oxygen_22.J.53_GLO_053_2104202241/OnePlus6Oxygen_22.J.53_OTA_053_all_2104202241_650a8ff9880.zip
+  ROM_URL: https://oxygenos.oneplus.net/OnePlus8Oxygen_15.O.35_OTA_0350_all_2103221818_a00994de270346bb.zip
   TZ: America/Sao_Paulo
 
 jobs:
