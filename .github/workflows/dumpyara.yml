@@ -5,7 +5,7 @@ on:
     branches: [ main ]
 
 env:
-  ROM_URL: https://oxygenos.oneplus.net/OnePlus8Oxygen_15.O.35_OTA_0350_all_2103221818_a00994de270346bb.zip
+  ROM_URL: https://bigota.d.miui.com/V12.0.6.0.RJUMIXM/vayu_global_images_V12.0.6.0.RJUMIXM_20210416.0000.00_11.0_global_b91dae13bb.tgz
   TZ: America/Sao_Paulo
 
 jobs:
