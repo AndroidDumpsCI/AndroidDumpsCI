@@ -26,16 +26,11 @@ jobs:
               sudo bash setup.sh
 
        - name: Setup config envs
-         env:
-           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-           GITHUB_ORG_NAME: ${{ secrets.GITHUB_ORG_NAME }}
-           BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
-           CHAT_ID: ${{ secrets.CHAT_ID }}
          run: |
-              echo "$GITHUB_TOKEN" > .github_token
-              echo "$GITHUB_ORG_NAME" > .github_orgname
-              echo "$BOT_TOKEN" > .tg_token
-              echo "$CHAT_ID" > .tg_chat
+              echo "${{ secrets.GIT_TOKEN }}" > .github_token
+              echo "${{ secrets.GIT_ORG_NAME }}" > .github_orgname
+              echo "${{ secrets.BOT_TOKEN }}" > .tg_token
+              echo "${{ secrets.CHAT_ID }}" > .tg_chat
 
        - name: Running Dumpyara
          run: |
