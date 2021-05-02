@@ -5,7 +5,7 @@ on:
     branches: [ main ]
 
 env:
-  ROM_URL: https://pilotfiber.dl.sourceforge.net/project/crdroid//j7xelte/6.x/crDroidAndroid-10.0-20210125-j7xelte-v6.14.zip
+  ROM_URL: http://otafsg-cost-az.coloros.com/OnePlus6/OnePlus6Oxygen_22.J.53_GLO_053_2104202241/patch/amazone2/GLO/OnePlus6Oxygen/OnePlus6Oxygen_22.J.53_GLO_053_2104202241/OnePlus6Oxygen_22.J.53_OTA_053_all_2104202241_650a8ff9880.zip
   TZ: America/Sao_Paulo
 
 jobs:
@@ -16,28 +16,21 @@ jobs:
        - name: Checkouts
          uses: actions/checkout@v2
 
-       - name: Setup Dump Environment
+       - name: Clone Dumpyara
          run: |
-              sudo apt install unace unrar zip unzip p7zip-full p7zip-rar sharutils rar uudeview mpack arj cabextract device-tree-compiler liblzma-dev python3-pip python3-setuptools brotli liblz4-tool axel gawk aria2 detox cpio rename
-              pip3 install pip setuptools wheel -U
-              pip3 install backports.lzma protobuf pycrypto docopt zstandard twrpdtgen
+              git clone https://github.com/DroidDumps/phoenix_firmware_dumper
 
-       - name: Running Dumpyara Shell Script
+       - name: Setup Dumpyara environment
          run: |
-              bash .github/workflows/dumpyara.sh "$ROM_URL"
+              cd phoenix_firmware_dumper
+              sudo bash setup.sh
 
-       - name: Checking Folder
+       - name: Running Dumpyara
          run: |
-              cd /home/runner/work/AndroidDumpsCI/AndroidDumpsCI/.github/workflows/working/
+              cd phoenix_firmware_dumper
+              bash dumper.sh "$ROM_URL"
+
+       - name: Checking Dumpyara folder
+         run: |
+              cd phoenix_firmware_dumper
               ls -la
-
-       - name: Compressing with tar.xz
-         run: |
-              cd /home/runner/work/AndroidDumpsCI/AndroidDumpsCI/.github/workflows/working/
-              tar c /home/runner/work/AndroidDumpsCI/AndroidDumpsCI/.github/workflows/working/* | nice -n19 xz -9 -T4 > dump.tar.xz
-
-       - name: Store Generated Files
-         uses: actions/upload-artifact@v2
-         with:
-           path: /home/runner/work/AndroidDumpsCI/AndroidDumpsCI/.github/workflows/working/dump.tar.xz
-           if-no-files-found: error
