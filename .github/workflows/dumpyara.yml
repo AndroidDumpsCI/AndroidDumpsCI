@@ -4,9 +4,12 @@ on:
   push:
     branches: [ main ]
 
+defaults:
+  run:
+    shell: bash
+
 env:
-  ROM_URL: https://bigota.d.miui.com/V12.0.9.0.RKBMIXM/miui_VENUSGlobal_V12.0.9.0.RKBMIXM_4fc24d1ec0_11.0.zip
-  TZ: America/Sao_Paulo
+  ROM_URL: https://bigota.d.miui.com/21.4.28/miui_GINKGO_21.4.28_924a46d87d_11.0.zip
 
 jobs:
   build:
@@ -21,21 +24,21 @@ jobs:
               git clone https://github.com/AndroidDumpsCI/firmware_dumper
 
        - name: Setup Dumpyara environment
+         working-directory: firmware_dumper
          run: |
-              cd firmware_dumper
               sudo bash setup.sh
               git config --global user.name "Hitalo"
               git config --global user.email "40531911+HitaloSama@users.noreply.github.com"
 
        - name: Setup config envs
+         working-directory: firmware_dumper
          run: |
-              cd firmware_dumper
               echo "${{ secrets.GIT_TOKEN }}" > .github_token
               echo "${{ secrets.GIT_ORG_NAME }}" > .github_orgname
               echo "${{ secrets.BOT_TOKEN }}" > .tg_token
               echo "${{ secrets.CHAT_ID }}" > .tg_chat
 
        - name: Running Dumpyara
+         working-directory: firmware_dumper
          run: |
-              cd firmware_dumper
               ./dump.sh "$ROM_URL"
