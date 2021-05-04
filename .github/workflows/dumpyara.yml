@@ -9,7 +9,7 @@ defaults:
     shell: bash
 
 env:
-  ROM_URL: https://bigota.d.miui.com/V12.0.3.0.RKHMIXM/miui_ALIOTHGlobal_V12.0.3.0.RKHMIXM_e4cdd42d11_11.0.zip
+  ROM_URL: https://cloud.s0-samfw.cf/afc4c1d5f707ba19e826ed9fd1306986
 
 jobs:
   build:
