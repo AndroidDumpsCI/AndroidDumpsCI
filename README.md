@@ -1,7 +1,13 @@
 # Android Dumps CI
 
-![](https://github.com/HitaloSama/AndroidDumpsCI/workflows/Dump/badge.svg)
+![](https://github.com/AndroidDumpsCI/AndroidDumpsCI/workflows/Dump/badge.svg)
 
 > CI for Android Firmwares Dumps
 
-This CI uses the [phoenix_firmware_dumper](https://github.com/DroidDumps/phoenix_firmware_dumper) to dump Android firmwares.
+This CI uses the [firmware_dumper](https://github.com/AndroidDumpsCI/firmware_dumper) to dump Android firmwares.
+
+## Update feed
+
+You can join our Telegram channel to receive updates of new dumps.
+
+- [@AndroidDumpsCI](https://t.me/AndroidDumpsCI)

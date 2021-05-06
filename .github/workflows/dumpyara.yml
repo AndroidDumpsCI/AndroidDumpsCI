@@ -3,6 +3,8 @@ name: Dump
 on:
   push:
     branches: [ main ]
+  paths-ignore:
+      - '**.md'
 
 defaults:
   run:
