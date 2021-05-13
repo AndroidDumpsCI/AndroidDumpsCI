@@ -2,16 +2,16 @@ name: Dump
  
 on:
   push:
+    paths-ignore:
+      - '*.md'
     branches: [ main ]
-  paths-ignore:
-      - '**.md'
 
 defaults:
   run:
     shell: bash
 
 env:
-  ROM_URL: https://cloud.s0-samfw.cf/afc4c1d5f707ba19e826ed9fd1306986
+  ROM_URL: https://bigota.d.miui.com/V12.0.9.0.RKGMIXM/miui_MOJITOGlobal_V12.0.9.0.RKGMIXM_dca72f24be_11.0.zip
 
 jobs:
   build:
