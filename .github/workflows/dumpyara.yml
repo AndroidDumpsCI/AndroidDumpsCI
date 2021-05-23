@@ -11,7 +11,7 @@ defaults:
     shell: bash
 
 env:
-  ROM_URL: https://bigota.d.miui.com/V12.0.9.0.RKGMIXM/miui_MOJITOGlobal_V12.0.9.0.RKGMIXM_dca72f24be_11.0.zip
+  ROM_URL: https://otafsg1.h2os.com/patch/amazone2/GLO/OnePlus7Oxygen/OnePlus7Oxygen_14.P.35_GLO_0350_2103221240/OnePlus7Oxygen_14.P.35_OTA_0350_all_2103221240_3e944b9d067.zip
 
 jobs:
   build:
