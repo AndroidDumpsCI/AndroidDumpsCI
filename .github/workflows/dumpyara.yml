@@ -11,7 +11,7 @@ defaults:
     shell: bash
 
 env:
-  ROM_URL: https://otafsg1.h2os.com/patch/amazone2/GLO/OnePlus7Oxygen/OnePlus7Oxygen_14.P.35_GLO_0350_2103221240/OnePlus7Oxygen_14.P.35_OTA_0350_all_2103221240_3e944b9d067.zip
+  ROM_URL: http://repo.hitcloud.workers.dev/0:down/Samfw.com_SM-A750G_ZTO_A750GUBS6CUA1_fac.zip
 
 jobs:
   build:
