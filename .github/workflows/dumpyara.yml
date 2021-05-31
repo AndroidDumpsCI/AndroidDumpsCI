@@ -11,7 +11,7 @@ defaults:
     shell: bash
 
 env:
-  ROM_URL: http://otafsc-cost.h2os.com/OnePlus7Pro_CH/OnePlus7ProHydrogen_21.H.38_0380_2105181017/patch/CHN/OnePlus7ProHydrogen/OnePlus7ProHydrogen_21.H.38_0380_2105181017/OnePlus7ProHydrogen_21.H.38_OTA_0370-0380_patch_2105181017_1c5c0cafd214ae4.zip
+  ROM_URL: https://pilotfiber.dl.sourceforge.net/project/crdroid//j7xelte/6.x/crDroidAndroid-10.0-20210417-j7xelte-v6.17.zip
 
 jobs:
   build:
