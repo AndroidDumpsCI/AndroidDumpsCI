@@ -11,7 +11,7 @@ defaults:
     shell: bash
 
 env:
-  ROM_URL: https://pilotfiber.dl.sourceforge.net/project/crdroid//j7xelte/6.x/crDroidAndroid-10.0-20210417-j7xelte-v6.17.zip
+  ROM_URL: http://repo.hitcloud.workers.dev/0:down/crDroidAndroid-10.0-20210530-j7xelte-v6.18.zip
 
 jobs:
   build:
