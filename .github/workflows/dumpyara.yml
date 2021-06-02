@@ -11,7 +11,7 @@ defaults:
     shell: bash
 
 env:
-  ROM_URL: http://repo.hitcloud.workers.dev/0:down/crDroidAndroid-10.0-20210530-j7xelte-v6.18.zip
+  ROM_URL: https://oxygenos.oneplus.net/OnePlus8VisibleOxygen_11.O.03_OTA_0030_all_2105142330_492fde7117a54a91.zip
 
 jobs:
   build:
