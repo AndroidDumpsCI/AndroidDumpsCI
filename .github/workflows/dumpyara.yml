@@ -11,7 +11,7 @@ defaults:
     shell: bash
 
 env:
-  ROM_URL: https://oxygenos.oneplus.net/OnePlus8VisibleOxygen_11.O.03_OTA_0030_all_2105142330_492fde7117a54a91.zip
+  ROM_URL: https://androidfilehost.com/?fid=11410963190603914962
 
 jobs:
   build:
