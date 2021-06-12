@@ -11,7 +11,7 @@ defaults:
     shell: bash
 
 env:
-  ROM_URL: https://cheems.mirrorbomt.workers.dev/0:/OnePlus9Oxygen_22.I.10_OTA_0100_all_2105290056_fb9d1dd9166d52e.zip
+  ROM_URL: https://cheems.mirrorbomt.workers.dev/0:/Samfw.com_SM-A207M_ZTO_A207MUBU2BUC9_fac.zip
 
 jobs:
   build:
