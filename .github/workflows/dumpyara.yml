@@ -11,7 +11,7 @@ defaults:
     shell: bash
 
 env:
-  ROM_URL: https://cheems.mirrorbomt.workers.dev/0:/Samfw.com_SM-A207M_ZTO_A207MUBU2BUC9_fac.zip
+  ROM_URL: https://ghostmirror.hitesh920.workers.dev/0://Samfw.com_SM-A125F_INS_A125FXXU1BUE4_fac.zip
 
 jobs:
   build:
