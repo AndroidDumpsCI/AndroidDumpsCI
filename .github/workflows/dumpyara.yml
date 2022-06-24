@@ -11,7 +11,7 @@ defaults:
     shell: bash
 
 env:
-  ROM_URL: https://repo.hitcloud.workers.dev/0:/Android/Samsung/SM-A750G_2_20210619033709_qvq77hm9kk_fac_A750GUBU6CUD2_A750GOWO6CUE1_A750GNUBU6CUD6_A750GUBU6CUD2_ZTO.zip
+  ROM_URL: http://repo.hitcloud.workers.dev/0:down/G610MUBS8CTG1_G610MZTO8CTG1_ZTO.zip
 
 jobs:
   build:
@@ -19,7 +19,7 @@ jobs:
 
     steps:
        - name: Checkouts
-         uses: actions/checkout@v2
+         uses: actions/checkout@v3
 
        - name: Clone Dumpyara
          run: |
