@@ -11,7 +11,7 @@ defaults:
     shell: bash
 
 env:
-  ROM_URL: http://repo.hitcloud.workers.dev/0:down/G610MUBS8CTG1_G610MZTO8CTG1_ZTO.zip
+  ROM_URL: https://assorted.downloads.oppo.com/firmware/CPH1717/CPH1717EX_11_OTA_0280_all_oqtKKBAP76Wr.zip
 
 jobs:
   build:
