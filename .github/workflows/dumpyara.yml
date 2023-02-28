@@ -11,7 +11,7 @@ defaults:
     shell: bash
 
 env:
-  ROM_URL: http://repo.hitcloud.workers.dev/0:down/G610MUBS8CTG1_G610MZTO8CTG1_ZTO.zip
+  ROM_URL: https://drive.google.com/u/0/uc?id=1SIIuI9qyP_Ke5SxlTU7gUm39d41acSwf&export=download
 
 jobs:
   build:
