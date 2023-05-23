@@ -11,7 +11,7 @@ defaults:
     shell: bash
 
 env:
-  ROM_URL: http://repo.hitcloud.workers.dev/0:down/G610MUBS8CTG1_G610MZTO8CTG1_ZTO.zip
+  ROM_URL: https://bigota.d.miui.com/V14.0.2.0.TGDMIXM/miui_VIVAGlobal_V14.0.2.0.TGDMIXM_70e8af00f6_13.0.zip
 
 jobs:
   build:
